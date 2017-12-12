@@ -36,9 +36,11 @@ class Livre
     private $auteur;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="categorie", type="string", length=50)
+     * @ORM\ManyToMany(targetEntity="Categorie")
+     * @ORM\JoinTable(name="livre_categorie",
+     *      joinColumns={@ORM\JoinColumn(name="livre_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="categorie_id", referencedColumnName="id")}
+     * )
      */
     private $categorie;
 
@@ -123,20 +125,6 @@ class Livre
     }
 
     /**
-     * Set categorie
-     *
-     * @param string $categorie
-     *
-     * @return Livre
-     */
-    public function setCategorie($categorie)
-    {
-        $this->categorie = $categorie;
-
-        return $this;
-    }
-
-    /**
      * Get categorie
      *
      * @return string
@@ -144,6 +132,30 @@ class Livre
     public function getCategorie()
     {
         return $this->categorie;
+    }
+
+    /**
+     * Add hobby
+     *
+     * @param \AppBundle\Entity\Categorie $categorie
+     *
+     * @return Livre
+     */
+    public function addCategorie(\AppBundle\Entity\Categorie $categorie)
+    {
+        $this->categorie[] = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Remove categorie
+     *
+     * @param \AppBundle\Entity\Categorie $categorie
+     */
+    public function removeCategorie(\AppBundle\Entity\Categorie $Categorie)
+    {
+        $this->Categorie->removeElement($Categorie);
     }
 
     /**
