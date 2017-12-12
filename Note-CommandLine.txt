@@ -1,0 +1,7 @@
+Eval a rendre à lkhouri92@gmail.com
+pour update la base doctrine.
+
+php .\bin\console doctrine\console server:run
+php bin/console doctrine:schema:update --force
+php bin/console doctrine:schema:create --dump-sql
+php bin/console debug:router
