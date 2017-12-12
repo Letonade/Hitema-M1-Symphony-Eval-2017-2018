@@ -31,7 +31,28 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="config_dev.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Livre.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Livre.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="208" column="5" lean-forward="true" selection-start-line="208" selection-start-column="5" selection-end-line="208" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -65,6 +86,8 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Contact.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/CoursesController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/CourseRepository.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Book.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Livre.php" />
       </list>
     </option>
   </component>
@@ -185,11 +208,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\hitema_Bachelor-2017\formationEvaluation\src\AppBundle\Entity" />
       <recent name="C:\Users\admin\Desktop\formation\app\Resources\views\contact" />
       <recent name="C:\Users\admin\Desktop\formation\app\Resources\views" />
       <recent name="C:\Users\admin\Desktop\formation\src\AppBundle\Controller" />
       <recent name="C:\Users\admin\Desktop\formation\app\Resources\views\member" />
-      <recent name="C:\Users\admin\Desktop\formation\app\Resources\views\default" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -220,12 +243,12 @@
       <workItem from="1510127397498" duration="22175000" />
       <workItem from="1512980732077" duration="11034000" />
       <workItem from="1513070935287" duration="6485000" />
-      <workItem from="1513080299123" duration="683000" />
+      <workItem from="1513080299123" duration="2056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74527000" />
+    <option name="totallyTimeSpent" value="75900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -281,20 +304,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/hello.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -348,13 +357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -628,6 +630,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Book.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Livre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="208" column="5" lean-forward="true" selection-start-line="208" selection-start-column="5" selection-end-line="208" selection-end-column="5" />
           <folding />
         </state>
       </provider>

@@ -41,7 +41,7 @@ monolog:
 #    delivery_addresses: ['me@example.com']
 
 parameters:
-    database_name: hitema_formation
+    database_name: hitema_formation_eval
     database_user: root
     database_password: null
 
