@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    </head>
+    <body>Plop
+        {% block body %}Le base est chargé au moins{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

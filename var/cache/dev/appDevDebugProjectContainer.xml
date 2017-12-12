@@ -421,10 +421,16 @@
     <service id="AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
+    <service id="AppBundle\Controller\LivreController" class="AppBundle\Controller\LivreController" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
     <service id="AppBundle\Controller\TwigController" class="AppBundle\Controller\TwigController" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
     <service id="AppBundle\Form\ContactType" class="AppBundle\Form\ContactType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="AppBundle\Form\LivreType" class="AppBundle\Form\LivreType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
@@ -443,7 +449,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.acc86277f563a9d248a9e077b0a27726"/>
+      <argument type="service" id="service_locator.3e25a1a87d2f1aedca55bb525c0a8448"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -612,7 +618,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>S0EzEQgKwNZFXthu7fX6Jf</argument>
+      <argument>LULJe87Aw+6v+MU6k0HVL+</argument>
       <argument>C:\wamp64\www\hitema_Bachelor-2017\formationEvaluation\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -622,7 +628,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>S0EzEQgKwNZFXthu7fX6Jf</argument>
+      <argument>LULJe87Aw+6v+MU6k0HVL+</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -741,7 +747,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.535dcfd2a4e47a92b797048a02a83f3f"/>
+      <argument type="service" id="service_locator.5013f2a5a68c360f57b3f0f9bb5199c3"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -1379,14 +1385,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -2172,12 +2170,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5a2fd2c4637436.77913094</argument>
+      <argument>5a2fe4ee056348.46589110</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5a2fd2c4637436.77913094</argument>
+      <argument>5a2fe4ee056348.46589110</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3159,10 +3157,14 @@
     <service id="abstract.instanceof.AppBundle\Controller\ContactController" class="AppBundle\Controller\ContactController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\LivreController" class="AppBundle\Controller\LivreController" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\LivreController" class="AppBundle\Controller\LivreController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\TwigController" class="AppBundle\Controller\TwigController" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\TwigController" class="AppBundle\Controller\TwigController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\ContactType" class="AppBundle\Form\ContactType" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Form\ContactType" class="AppBundle\Form\ContactType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\LivreType" class="AppBundle\Form\LivreType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Form\LivreType" class="AppBundle\Form\LivreType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="service_locator.36919f1d16b8bc5f683266f2a0d260f9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
@@ -3171,14 +3173,19 @@
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
-    <service id="service_locator.acc86277f563a9d248a9e077b0a27726" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.4c34fda92808eab8245fc69a71f45add" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
-    <service id="service_locator.535dcfd2a4e47a92b797048a02a83f3f" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.3e25a1a87d2f1aedca55bb525c0a8448" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.5013f2a5a68c360f57b3f0f9bb5199c3" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="AppBundle\Form\ContactType" type="service" id="AppBundle\Form\ContactType"/>
+        <argument key="AppBundle\Form\LivreType" type="service" id="AppBundle\Form\LivreType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
@@ -3388,7 +3395,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>-vfBKlkUKm</argument>
       <argument>0</argument>
-      <argument>S0EzEQgKwNZFXthu7fX6Jf</argument>
+      <argument>LULJe87Aw+6v+MU6k0HVL+</argument>
       <argument>C:\wamp64\www\hitema_Bachelor-2017\formationEvaluation\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3396,7 +3403,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>xISgbGHr3r</argument>
       <argument>0</argument>
-      <argument>S0EzEQgKwNZFXthu7fX6Jf</argument>
+      <argument>LULJe87Aw+6v+MU6k0HVL+</argument>
       <argument>C:\wamp64\www\hitema_Bachelor-2017\formationEvaluation\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3404,7 +3411,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>VQWoDO450+</argument>
       <argument>0</argument>
-      <argument>S0EzEQgKwNZFXthu7fX6Jf</argument>
+      <argument>LULJe87Aw+6v+MU6k0HVL+</argument>
       <argument>C:\wamp64\www\hitema_Bachelor-2017\formationEvaluation\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3412,7 +3419,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>KJ-dNUXE97</argument>
       <argument>0</argument>
-      <argument>S0EzEQgKwNZFXthu7fX6Jf</argument>
+      <argument>LULJe87Aw+6v+MU6k0HVL+</argument>
       <argument>C:\wamp64\www\hitema_Bachelor-2017\formationEvaluation\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>

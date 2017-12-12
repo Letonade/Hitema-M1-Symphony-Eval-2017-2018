@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Livres</h1>
+                {#
+                    formulaire
+                        form_start : <form>
+                        form_end : </form>
+                        form_label : <label>
+                        form_widget : champ
+                        form_errors : erreur
+                        nécessaire de créer le bouton submit
+                        variable form : provient du contrôleur
+                        nom des champs provient de la classe de formulaire Form/...Type
+
+                        attr: attribut HTML
+                #}
+
+                {{ form_errors(form.titre) }}
+                {{ form_errors(form.auteur) }}
+                {{ form_errors(form.categorie) }}
+                {{ form_errors(form.description) }}
+                {{ form_errors(form.image) }}
+                {{ form_errors(form.date_publication) }}
+
+                {{ form_start(form, { 'attr' : { 'novalidate' : 'novalidate' } } ) }}
+                <p>
+                     {{ form_label(form.titre, 'Prénom :') }}
+                    {{ form_widget(form.titre) }}
+                </p>
+                <p>
+                     {{ form_label(form.auteur, 'Nom :') }}
+                    {{ form_widget(form.auteur) }}
+                </p>
+                <p>
+                     {{ form_label(form.categorie, 'Email :') }}
+                    {{ form_widget(form.categorie) }}
+                </p>
+                <p>
+                     {{ form_label(form.description, 'Email :') }}
+                    {{ form_widget(form.description) }}
+                </p>
+                <p>
+                     {{ form_label(form.date_publication, 'Email :') }}
+                    {{ form_widget(form.date_publication) }}
+                </p>
+                <p>
+                    <input type="submit" class="btn btn-primary">
+                </p>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+
