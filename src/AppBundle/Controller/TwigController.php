@@ -9,7 +9,7 @@ class TwigController extends Controller
 {
 
     /**
-     * @Route("/layout", name="layout")
+     * @Route("/layoutt", name="layoutt")
      */
     public function layoutAction(){
         return $this->render('twig/layout.html.twig');

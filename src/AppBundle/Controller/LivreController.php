@@ -1,5 +1,5 @@
 <?php
-// de Conte-Lay Corentin
+
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Livre;
